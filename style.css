@@ -38,6 +38,7 @@ body{
     grid-template-columns: repeat(auto-fit,minmax(180px,auto));
     gap: 1rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
    
  
 }
