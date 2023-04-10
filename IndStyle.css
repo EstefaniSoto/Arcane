@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: rgba(225, 48, 48, 0.749);
+
+  }
+
+.logoImg img{
+    max-width: 125px;
+    padding-left: 2rem;
+}
+
+.logo{
+    margin: 0;
+    color: white;
+    font-family: 'Alkatra', cursive;
+    font-size: 55px;
+    text-shadow: 0 0 10px #479fc5, 2px 2px 2px rgba(34,206,204,0);
+    padding-right: 22rem;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    padding: 20px 10px;
+}
+  
+.menu li {
+    padding-left: 2rem;
+}
+  
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+  
+.menu li a:hover {
+    background-color: white;
+    color:rgb(225, 25, 25);
+}
+
+.biografia{
+    background-image: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80');
+}
+
+.biografia h2{
+    margin: 0;
+    padding-top: 5rem;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.biografia p{
+    margin-top: 2rem;
+    font-size: 20px;
+    padding-left: 2rem;
+    text-align: justify;
+    color: rgb(245, 245, 245);
+
+}
+
+.menu-peliculas{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.menu-peliculas h2{
+    background-color: rgb(225, 25, 25);
+    padding: 10px;
+    display: inline-block;
+
+}
+.menu-peliculas img{
+    margin-top: 2rem;
+    display: inline-block;
+    width: 20rem;
+    padding-left: 2rem;
+}
+
+.menu-peliculas:hover{
+    background-image: url('https://media2.giphy.com/media/ILf2HFztkfkM2yyAag/giphy.gif?cid=6c09b952e0c117ff2f895a73d4085ba596b3ddf2493cc909&rid=giphy.gif&ct=s');
+    height: 15rem;
+}
