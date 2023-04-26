@@ -6,30 +6,100 @@
 }
 
 body{
-    background-color: black;
+
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-image: url(imagenes.img/banner3.webp) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    
+    animation-name: animate;
+    animation-direction: alternate-reverse ;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards ;
+    animation-iteration-count: infinite ;
+    }
+    
+    @keyframes animate{
+    
+        0%{
+            background-image: url(imagenes.img/banner13.jpg) ;
+        }
+        20%{
+            background-image: url(imagenes.img/pe.jpg) ;
+        }
+        40%{
+            background-image: url(imagenes.img/po.jpg) ;
+        }
+        60%{
+            background-image: url(imagenes.img/banner11.jpg) ;
+        }
+        80%{
+            background-image: url(imagenes.img/banner10.jpg) ;
+        }
+        100%{
+            background-image: url(imagenes.img/cropped-1920-1080-1003220.png) ;
+        }
+    
 }
+
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem;
-    background-color: rgba(225, 48, 48, 0.749);
+    padding: 5px 10%;
+    height: 45px;
+   
 
   }
 
-.logoImg img{
-    max-width: 100px;
-    padding-left: 1rem;
+    .header .btn button{
+   
+    font-weight: 700;
+     color:blueviolet;
+     padding: 9px 25px;
+     background: #fff;
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+  }
+
+  .btn button:hover{
+    background-color:blueviolet;
+    color: white;
+    transform: scale(1.03);
+  }
+
+
+.header .logoImg img{
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    width: auto;
+    transition: all 0.3s;
+    margin-right: auto;
+    
+
+
+}
+:root{
+    --main-color:blueviolet;
+    --text-color:#020307;
+    --bg-color:#fff;
+}
+.logoImg img:hover{
+
+transform: scale(1.05);
+
+
 }
 
-.logo{
-    margin: 0;
-    color: white;
-    font-family: 'Alkatra', cursive;
-    font-size: 30px;
-    text-shadow: 0 0 10px #479fc5, 2px 2px 2px rgba(34,206,204,0);
-    padding-right: 59rem;
-}
 
 .menu ul{
     list-style: none;
@@ -39,61 +109,65 @@ header {
   
 .menu li {
     padding-left: 2rem;
+    
 }
-  
+.menu li:hover {
+    transform: scale(1.1);
+    padding-left: 2rem;
+}
 .menu li a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: white;
-}
+    color:#fff;
   
-.menu li a:hover {
-    background-color: white;
-    color:rgb(225, 25, 25);
+    
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+
 }
 
-.content{
+.navbar a::after {
+   content: "";
+    width: 0;
+    height: 2px;
+    background:var(--main-color);
+    position:absolute;
+    bottom: 5px;
+    left: 10px;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
 
-height: 100vh;
-width: 100%;
-background-size: cover;
-background-image: url(imagenes.img/banner3.jpg);
-background-position: center;
-background-repeat: no-repeat;
-transition: 5s;
+} 
+.navbar a:hover::after {
+    width: 100%;
 
-animation-name: animate;
-animation-direction: alternate-reverse ;
-animation-play-state: running;
-animation-timing-function: ease-in-out;
-animation-duration: 30s;
-animation-fill-mode: forwards ;
-animation-iteration-count: infinite ;
+    transform: scale(1, 1);
 }
 
-@keyframes animate{
-
-    0%{
-        background-image: url(imagenes.img/banner13.jpg) ;
+@media (max-width: 940px){
+    header{
+        background-color: black;
+        
+        
     }
-    20%{
-        background-image: url(imagenes.img/banner2.jpg) ; 
+    .menu ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background:blueviolet;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    } 
+    .menu ul li{
+        margin: 40px 0;
     }
-    40%{
-        background-image: url(imagenes.img/banner9.jpg) ; 
-    }
-    60%{
-        background-image: url(imagenes.img/banner4.jpg) ; 
-    }
-    80%{
-        background-image: url(imagenes.img/banner10.jpg) ;
-    }
-    100%{
-        background-image: url(imagenes.img/banner11.jpg) ;
-    }
-
-
 }
+
+
 
 
