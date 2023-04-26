@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 body{
     background-image: url("https://media.tenor.com/ll3rQ9a_zqYAAAAC/galaxy.gif");
     background-repeat: no-repeat;
@@ -32,6 +33,7 @@ body{
     color:#fff;
     
 }
+
 .navbar a{
     font-size: 1rem;
     font-weight: 500;
@@ -74,7 +76,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 5px 10%;
-    background-color: #000;
+    background-color: transparent;
     height: 45px;
 }
 
@@ -666,8 +668,8 @@ header {
   }
 
 
-@media only screen and (max-width: 1000px) {
-    /* Estilos para pantallas menores o iguales a 900px */
+@media only screen and (max-width: 1080px) {
+    /* Estilos para pantallas menores o iguales a 1080px */
     body {
         background-image: url("https://media.tenor.com/ll3rQ9a_zqYAAAAC/galaxy.gif");
         background-repeat: no-repeat;
