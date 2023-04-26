@@ -11,14 +11,21 @@
     margin-top: 1rem;
 }
 :root{
-    --main-color:#ff2c1f;
+    --main-color:#830883;
     --text-color:#020307;
     --bg-color:#fff;
 }
 
 body{
-    background-color: #0b0b0c;
+    background-image: url(imagenes.img/cartelera1.gif);
+    background-size: cover;
     color: #fff;
+}
+
+
+.movies{
+
+    margin-top: 100px;
 }
 
 .heading{
@@ -40,11 +47,15 @@ body{
     gap: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    
 
 }
 .box .box-img{
     width: 100%;
     height: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
 }
 .box .box-img img{
@@ -56,4 +67,132 @@ body{
 .box .box-img img:hover{
     transform: translateY(-10px);
     transition: 0.3s all linear;
+}
+
+@media screen and (min-width: 768px) {
+    .box {
+      justify-content: center;
+      margin-left: 10px;
+    }
+  }
+
+  
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10%;
+    height: 45px;
+   
+
+  }
+
+    .header .btn button{
+   
+    font-weight: 700;
+     color:blueviolet;
+     padding: 9px 25px;
+     background: #fff;
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+  }
+
+  .btn button:hover{
+    background-color:blueviolet;
+    color: white;
+    transform: scale(1.03);
+  }
+
+
+.header .logoImg img{
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    width: auto;
+    transition: all 0.3s;
+    margin-right: auto;
+    
+
+
+}
+:root{
+    --main-color:blueviolet;
+    --text-color:#020307;
+    --bg-color:#fff;
+}
+.logoImg img:hover{
+
+transform: scale(1.05);
+
+
+}
+
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    padding: 20px 10px;
+}
+  
+.menu li {
+    padding-left: 2rem;
+    
+}
+.menu li:hover {
+    transform: scale(1.1);
+    padding-left: 2rem;
+}
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:#fff;
+  
+    
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+.navbar a::after {
+   content: "";
+    width: 0;
+    height: 2px;
+    background:var(--main-color);
+    position:absolute;
+    bottom: 5px;
+    left: 10px;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+
+} 
+.navbar a:hover::after {
+    width: 100%;
+
+    transform: scale(1, 1);
+}
+
+@media (max-width: 940px){
+    header{
+        background-color: black;
+        
+        
+    }
+    .menu ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background:blueviolet;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    } 
+    .menu ul li{
+        margin: 40px 0;
+    }
 }
