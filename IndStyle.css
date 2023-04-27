@@ -57,8 +57,12 @@ header {
    
 
   }
+  .Menu{
+    display: none ;
+  }
 
-    .header .btn button{
+    .header .btn button,
+    .header .Menu button{
    
     font-weight: 700;
      color:blueviolet;
@@ -70,11 +74,24 @@ header {
      transition: all 0.3s ease 0s;
   }
 
-  .btn button:hover{
+  .btn button:hover,
+  .header .Menu button:hover{
     background-color:blueviolet;
     color: white;
     transform: scale(1.03);
   }
+
+@media screen and (max-width: 800px) {
+    .menu, .btn{
+        display: none;
+    }
+
+    .Menu{
+        display: inherit ;
+    }
+}
+
+
 
 
 .header .logoImg img{
@@ -142,31 +159,72 @@ transform: scale(1.05);
 
 } 
 .navbar a:hover::after {
+
     width: 100%;
 
     transform: scale(1, 1);
 }
 
-@media (max-width: 940px){
-    header{
-        background-color: black;
-        
-        
-    }
-    .menu ul{
-        position: fixed;
-        top: 80px;
-        left: 0;
-        background:blueviolet;
-        height: 100vh;
-        width: 100%;
-        display: block;
-        text-align: center;
-    } 
-    .menu ul li{
-        margin: 40px 0;
-    }
+a{
+    text-decoration: none;
 }
+.header .overlay{
+    color: black;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color:rgba(11, 11, 11, 0.95) ;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color:blueviolet;
+}
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px){
+    
+    .header .overlay a{
+        font-size: 20px;
+    }
+
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+
+
+}
+
 
 
 
