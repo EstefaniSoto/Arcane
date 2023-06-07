@@ -14,25 +14,6 @@
     <title>Arcane</title>
 </head>
 <body>
-
-    <header class = "header">
-    <!--Logo-->
-    <div class="logoImg">
-        <a href="index.html"><img src="imagenes.img/Arcane logo fix.png"></a>
-    </div>
-    
-    <!--Menú-->
-    <nav class="menu">
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="peliculas.html">Cartelera</a></li>
-            <li><a href="snacks/index.html">Snacks</a></li>
-            <li><a href="tickets/index_tickets.html">Tickets</a></li>
-        </ul>
-    
-    </nav>
-    <a href="contacto.html" class="btn"><button>Contacto</button></a>
-
     <header class="header">
         <!--Logo-->
         <div class="logoImg">
@@ -52,22 +33,17 @@
     </header>
     
     <!--Breve descripción-->
-    <form class="form">
-
-            <h2>Contactenos</h2>
-            <p ><input placeholder="Nombre completo"></p>
-        
-            <p ><input placeholder="Email"></p>
-        
-            <p ><input placeholder="Haga su sugerencia"></p>
-        
-            <button class="btn-send">Enviar mensaje</button>
-    
-            <div class="formu">
-                <span class="fa fa-phone"></span> 809-235-9324 ext.214
-                <span class="fa fa-envelope-o"></span> ArCinema@arcane.com
-    
-            </div>
+    <form class="form" id="contactForm">
+        <h2>Contactenos</h2>
+        <p><input placeholder="Nombre completo" id="nombre"></p>
+        <p><input placeholder="Email" id="email"></p>
+        <p><input placeholder="Haga su sugerencia" id="sugerencia"></p>
+        <button type="submit" class="btn-send">Enviar mensaje</button>
+        <div class="formu">
+            <span class="fa fa-phone"></span> 809-235-9324 ext.214
+            
+            <span class="fa fa-envelope-o"></span> ArCinema@arcane.com
+        </div>
     </form>
 
     <script src="contact.js"></script>
