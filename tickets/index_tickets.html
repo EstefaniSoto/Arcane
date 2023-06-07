@@ -23,20 +23,17 @@
         
         <!--Menú-->
         <nav class="menu">
-        <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../peliculas.html">Cartelera</a></li>
-            <li><a href="../snacks/index.html">Snacks</a></li>
-            <li><a href="/tickets/index_tickets.html">Tickets</a></li>
-        </ul>
-        
+            <ul class="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../peliculas.html">Cartelera</a></li>
+                <li><a href="../snacks/index.html">Snacks</a></li>
+                <li><a href="/tickets/index_tickets.html">Tickets</a></li>
+            </ul>
+            
         </nav>
         <a href="../contacto.html" class="btn"><button>Contacto</button></a>
-        </header>
+    </header>
         <!--Breve descripción-->
-        <div class="content"></div>
-        <!--Imagenes-->
-      
     
     <div class="fondo">
         <div class="cuadro">
@@ -46,12 +43,12 @@
             </div>
 
             <div class="Rtickets">
-                <form  action="">
+                <form id="formulario" action="">
                     <h1 class="titulo2">Reserva tus tickets</h1>
                  
                     <div class="datos">
                         <label for="name">Nombre completo:</label>
-                        <input type="text" placeholder="Ej: Juan Perez">
+                        <input id="nombre" type="text" placeholder="Ej: Juan Perez">
 
                         <label for="number">Numero de telefono:</label>
                         <input type="text" placeholder="Ej: 829654789">
@@ -60,13 +57,13 @@
                         <input type="text" placeholder="Ej: juanp@gmail.com">
                         <br>
                         <br>
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <select id="pelicula" class="form-select form-select-sm" aria-label=".form-select-sm example">
                             <option selected>Selecciona la pelicula</option>
-                            <option value="1">SUPER MARIO BROS (2D) ESP</option>
-                            <option value="2">EVIL DEAD RISE (2D) ESP</option>
-                            <option value="3">SUZUME (2D) ESP</option>
-                            <option value="3">JOHN WICK:CHAPTER 4 (2D) ESP</option>
-                            <option value="3">COMUNION CON EL DIABLO (2D) ESP</option>
+                            <option value="SUPER MARIO BROS (2D)">SUPER MARIO BROS (2D) ESP</option>
+                            <option value="EVIL DEAD RISE (2D)">EVIL DEAD RISE (2D) ESP</option>
+                            <option value="SUZUME (2D)">SUZUME (2D) ESP</option>
+                            <option value="JOHN WICK:CHAPTER 4 (2D)">JOHN WICK:CHAPTER 4 (2D) ESP</option>
+                            <option value="COMUNION CON EL DIABLO (2D)">COMUNION CON EL DIABLO (2D) ESP</option>
                         </select>
                         <br>
                         <select class="form-select form-select-sm" aria-label=".form-select-sm example">
@@ -77,14 +74,14 @@
                         </select>
                         <br>
                         <label for="">Selecione la fecha de preferencia:</label>
-                        <input type="date">
+                        <input id="fecha" type="date">
                     </div>
-                    <button type="button" class="button">Reservar</button>
+                    <button type="submit" class="button">Reservar</button>
                 </form>
             </div>
         </div>
     </div>   
 </body>
-
+<script src="/alertas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </html>
