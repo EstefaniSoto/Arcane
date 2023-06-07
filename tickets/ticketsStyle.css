@@ -1,11 +1,9 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,600&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     list-style: none;
     text-decoration: none;
     scroll-padding-top: 2rem;
@@ -133,32 +131,50 @@ input{
 }
 
 /* navbar */
-
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 10%;
-    background-color: #000;
     height: 45px;
-}
+   
 
-.header .btn button{
+  }
+  .Menu{
+    display: none ;
+  }
+
+    .header .btn button,
+    .header .Menu button{
+   
     font-weight: 700;
-    color:blueviolet;
-    padding: 9px 25px;
-    background: #fff;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
+     color:blueviolet;
+     padding: 9px 25px;
+     background: #fff;
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+  }
 
-.btn button:hover{
+  .btn button:hover,
+  .header .Menu button:hover{
     background-color:blueviolet;
     color: white;
     transform: scale(1.03);
+  }
+
+@media screen and (max-width: 800px) {
+    .menu, .btn{
+        display: none;
+    }
+
+    .Menu{
+        display: inherit ;
+    }
 }
+
+
 
 
 .header .logoImg img{
@@ -168,9 +184,10 @@ header {
     width: auto;
     transition: all 0.3s;
     margin-right: auto;
+    
+
 
 }
-
 :root{
     --main-color:blueviolet;
     --text-color:#020307;
@@ -178,7 +195,8 @@ header {
 }
 .logoImg img:hover{
 
-    transform: scale(1.05);
+transform: scale(1.05);
+
 
 }
 
@@ -202,6 +220,7 @@ header {
     padding: 10px 20px;
     text-decoration: none;
     color:#fff;
+  
     
 }
 .navbar a{
@@ -218,11 +237,59 @@ header {
     position:absolute;
     bottom: 5px;
     left: 10px;
-    transition: 0.3s all linear;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+
 } 
 .navbar a:hover::after {
 
     width: 100%;
+
+    transform: scale(1, 1);
+}
+
+a{
+    text-decoration: none;
+}
+.header .overlay{
+    color: black;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color:rgba(11, 11, 11, 0.95) ;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color:blueviolet;
+}
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
 }
 
 /* media query y responsive */
