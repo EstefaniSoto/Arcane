@@ -47,10 +47,8 @@ header {
     width: auto;
     transition: all 0.3s;
     margin-right: auto;
-    
-
-
 }
+
 :root{
     --main-color:blueviolet;
     --text-color:#020307;
