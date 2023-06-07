@@ -73,6 +73,7 @@ header {
     --text-color:#020307;
     --bg-color:#fff;
 }
+
 .logoImg img:hover{
 
 transform: scale(1.05);
