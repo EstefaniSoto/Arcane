@@ -11,121 +11,257 @@
     <link rel="stylesheet" href="../snacks/static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.pngmart.com/files/5/Movie-PNG-Transparent-Image.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
     <title>Snacks</title>
+    
 </head>
 <body>
     <header class = "header">
         <!--Logo-->
         <div class="logoImg">
-            <a href="../index.html"><img src="../tickets/static/img/Arcane logo fix.png"></a>
-            
+            <a href="../index.html"><img src="../imagenes.img/Arcane logo fix.png"></a>
         </div>
-        
+    
         <!--Menú-->
         <nav class="menu">
         <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="../index.html">Home</a></li>
             <li><a href="../peliculas.html">Cartelera</a></li>
             <li><a href="../snacks/index.html">Snacks</a></li>
             <li><a href="../tickets/index_tickets.html">Tickets</a></li>
         </ul>
         
-        <!--Botó contacto-->
         </nav>
-        <a href="../contacto.html" class="btn"><button>Contacto</button></a>
+        <a href="../contacto.html" class="btn">
+            <button>Contacto</button>
+        </a>
+        <a onclick="openNav()" class="Menu"  href="#">
+            <button>Menu</button>
+        </a>
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="../peliculas.html">Cartelera</a>
+            <a href="../snacks/index.htm">Snacks</a>
+            <a href="../tickets/index_tickets.html">Tickets</a>
+            <a href="../contacto.html">Contacto</a>
+            </div>
+        </div>
         </header>
 
-    <!--Imagen-->
-    <div id="snackBar">
-        <img src="https://cdn.wallpapersafari.com/68/82/75N4Ge.jpg">
-        <div class="titulo">
-            <h1>DISFRUTA</h1>
-            <h2>DE NUESTRO MENÚ</h2>
-            <button value="ordenar">Ordena tu comida</button>
+    <!--Portada-->
+    <main>
+        <div class="portrait-container">
+            <img class="img-portrait" src="./imagenes/Portada.jpg">
+            <img class="img-portrait2" src="./imagenes/portrait2.jpg">
+            <div class="info-container">
+                <h1 class="title">DISFRUTA DE NUESTRO MENÚ</h1>
+                <button class="order-btn"><a href="#food-menu">¡Ordena tu comida!</a></button>
+            </div>
         </div>
-    </div>
 
-    <!--Snacks-->
-    <div class="menu-snacks">
-        <ul>
-            <li><a href="#img-container-palomitas">Palomitas</a></li>
-            <li><a href="#img-container-bebidas">Bebidas</a></li>
-            <li><a href="#img-container-hotdogs">HotDogs</a></li>
-            <li><a href="#img-container-nachos">Nachos</a></li>
-        </ul>
-    </div>
+        <!--Menu sección-->
+        <div id="food-menu">
+            <div class="food-menu-info">
+                <img class="food-menu-img" src="https://www.freeiconspng.com/thumbs/popcorn-png/popcorn-png-23.png">
+                <h2 class="food-menu-title">ARCANE'S FOOD</h2>
+                <img class="food-menu-img" src="https://www.pngall.com/wp-content/uploads/8/Coca-Coal-Soda-PNG-High-Quality-Image.png">
+            </div>
+            <h3 class="food-menu-frase">Sabores irresistibles para tu paladar</h3>
+        </div>
 
-    <div id="img-container-palomitas">
-        <img class = "popCorn1" src="https://pngimg.com/d/popcorn_PNG30.png">
-        <label class="popCorn1-title">
-            <h3>Palomitas tradicionales</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "popCorn2" src="https://cdn.shopify.com/s/files/1/0743/2055/products/2021_Bacon_Cheddar_01_1000x.png?v=1628549071">
-        <label class="popCorn2-title">
-            <h3>Palomitas con queso</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "popCorn3" src="https://www.pngarts.com/files/4/Caramel-Popcorn-PNG-Pic.png">
-        <label class="popCorn3-title">
-            <h3>Palomitas con caramelo</h3>
-            <button>Ordenar</button>
-        </label>
-    </div>
+        <!--Platillos-->
+        <!--Palomitas-->
+        <div id="menu-container">
+            <div class="card">
+                <img src="./imagenes/palomitas-tradicionales.avif">
+                <p class="food-title">Palomitas tradicionales</p>
+                <div class="food-info">
+                    <p class="price">RD $100</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
 
-    <div id="img-container-bebidas">
-        <img class = "drink1" src="https://www.pngmart.com/files/16/Cold-Soda-PNG-Image.png" >
-        <label class="drink1-title">
-            <h3>Refrescos</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "drink2" src="https://domiciliospopsy.com/storage/subcategories/42.png">
-        <label class="drink2-title">
-            <h3>Malteadas</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "drink3" src="https://www.pngmart.com/files/16/Plastic-Water-Bottle-PNG-Clipart.png">
-        <label class="drink3-title">
-            <h3>Agua</h3>
-            <button>Ordenar</button>
-        </label>
-    </div>
+            <div class="card">
+                <img src="./imagenes/palomitas-mantequilla.jpg">
+                <p class="food-title">Palomitas de mantequilla</p>
+                <div class="food-info">
+                    <p class="price">RD $120</p>
+                    <button><a href="#form">Ordenar<a href="#form"></a></button>
+                </div>
+            </div>
 
-    <div id="img-container-hotdogs">
-        <img class = "hotdog1" src="https://pngimg.com/d/hot_dog_PNG10221.png" >
-        <label class="hotdog1-title">
-            <h3>Tradicional</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "hotdog2" src="https://www.pngmart.com/files/8/Hot-Dog-PNG-HD-Quality.png">
-        <label class="hotdog2-title">
-            <h3>Mexican Dog</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "hotdog3" src="https://chosengenerationcc.com/wp-content/uploads/2022/07/ClipartKey_271537.png">
-        <label class="hotdog3-title">
-            <h3>Chili Dog</h3>
-            <button>Ordenar</button>
-        </label>
-    </div>
+            <div class="card">
+                <img src="./imagenes/Palomitas-caramelizadas.webp">
+                <p class="food-title">Palomitas caramelizadas</p>
+                <div class="food-info">
+                    <p class="price">RD $150</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
 
-    <div id="img-container-nachos">
-        <img class = "nachos1" src="https://pollobrujo.com.gt/wp-content/uploads/2020/09/Nachos-con-queso-transparente.png" >
-        <label class="nachos1-title">
-            <h3>Nachos con queso</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "nachos2" src="https://www.pngkit.com/png/full/61-610503_taco-bell-nachos-png-nachos-con-queso-y.png">
-        <label class="nachos2-title">
-            <h3>Mexican Dog</h3>
-            <button>Ordenar</button>
-        </label>
-        <img class = "nachos3" src="https://static.wixstatic.com/media/d2e20e_41fbdeb0bbf1403bbe2621fac85d2362~mv2.png/v1/fill/w_304,h_224,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Dorilocos-117.png">
-        <label class="nachos3-title">
-            <h3>Chili Dog</h3>
-            <button>Ordenar</button>
-        </label>
+            <div class="card">
+                <img src="./imagenes/Palomitas-queso.jpg">
+                <p class="food-title">Palomitas con queso</p>
+                <div class="food-info">
+                    <p class="price">RD $150</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <!--Refrescos-->
+            <div class="card">
+                <img src="./imagenes/refrescosjpg.jpg">
+                <p class="food-title">Refrescos</p>
+                <div class="food-info">
+                    <p class="price">RD $50</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/malteadas.jpg">
+                <p class="food-title">Malteadas</p>
+                <div class="food-info">
+                    <p class="price">RD $150</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/agua.jpg">
+                <p class="food-title">Agua</p>
+                <div class="food-info">
+                    <p class="price">RD $35</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/helados.jpg">
+                <p class="food-title">Helados</p>
+                <div class="food-info">
+                    <p class="price">RD $200</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <!--hotdogs y nachos-->
+            <div class="card">
+                <img src="./imagenes/hot_dog_americano.jpg">
+                <p class="food-title">Hot dog tradicional</p>
+                <div class="food-info">
+                    <p class="price">RD $85</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/Hot-dogs-fancywebp.webp">
+                <p class="food-title">Fancy hot dog</p>
+                <div class="food-info">
+                    <p class="price">RD $100</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/images-nachos-queso.jpg">
+                <p class="food-title">Nachos con queso</p>
+                <div class="food-info">
+                    <p class="price">RD $100</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/nachos-con-carne.jpg">
+                <p class="food-title">Fancy nachos</p>
+                <div class="food-info">
+                    <p class="price">RD $150</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <!--Combos-->
+            <div class="card">
+                <img src="./imagenes/combo1.jpg">
+                <p class="food-title">Combo 1</p>
+                <div class="food-info">
+                    <p class="price">RD $450</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/combo2.jpg">
+                <p class="food-title">Combo 2</p>
+                <div class="food-info">
+                    <p class="price">RD $250</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/combo3.webp">
+                <p class="food-title">Combo 3</p>
+                <div class="food-info">
+                    <p class="price">RD $315</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./imagenes/combo4.jpg">
+                <p class="food-title">Combo 4</p>
+                <div class="food-info">
+                    <p class="price">RD $485</p>
+                    <button><a href="#form">Ordenar</a></button>
+                </div>
+            </div>
+        </div>
+        
+        <!--Formulario-->
+        <div id="form">
+        <form>
+            <h4>Food order</h4>
+            <p>Llene todos los campos</p>
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre completo">
+
+            <label>comida</label>
+            <select>
+                <option value="f0">Seleccione</option>
+                <option value="f1">Palomitas tradicionales</option>
+                <option value="f2">Palomitas de mantequilla</option>
+                <option value="f3">Palomitas caramelizadas</option>
+                <option value="f4">Palomitas de queso</option>
+            </select>
+
+            <label>Cantidad</label>
+            <select>
+                <option value="o1">1</option>
+                <option value="o2">2</option>
+                <option value="o3">3</option>
+                <option value="o4">4</option>
+            </select>
+
+            <label>Tarjeta</label>
+            <input type="text" placeholder="Ingrese número de tarjeta">
+
+            <label>Email</label>
+            <input type="email" placeholder="Correo electrónico">
+            
+            <div class="orderFood-btn">
+                <button class="order-submit-btn">Ordenar</button>
+            </div>
+        </form>
     </div>
-    <!--Fin snacks-->  
+    </main>
+
+    <script type="text/javascript" src="../nav.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

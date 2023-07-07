@@ -7,16 +7,68 @@
 }
 
 body{
-
-    background-image: url("https://media.tenor.com/ll3rQ9a_zqYAAAAC/galaxy.gif");
+    background-image: url("../imagenes/galaxy.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10%;
+    height: 45px;
+   
+
+  }
+  .Menu{
+    display: none ;
+  }
+
+    .header .btn button,
+    .header .Menu button{
+   
+    font-weight: 700;
+     color:blueviolet;
+     padding: 9px 25px;
+     background: #fff;
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+  }
+
+  .btn button:hover,
+  .header .Menu button:hover{
+    background-color:blueviolet;
+    color: white;
+    transform: scale(1.03);
+  }
+
+
+
+.header .logoImg img{
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    width: auto;
+    transition: all 0.3s;
+    margin-right: auto;
+    
+}
+:root{
+    --main-color:blueviolet;
+    --text-color:#020307;
+    --bg-color:#fff;
+}
+.logoImg img:hover{
+
+    transform: scale(1.05);
 
 }
 
 .menu ul{
-    font-family: 'Poppins', sans-serif;
     list-style: none;
     display: flex;
     padding: 20px 10px;
@@ -35,6 +87,7 @@ body{
     padding: 10px 20px;
     text-decoration: none;
     color:#fff;
+  
     
 }
 .navbar a{
@@ -43,786 +96,331 @@ body{
 
 }
 
-
 .navbar a::after {
-    content: "";
-     width: 0;
-     height: 2px;
-     background:var(--main-color);
-     position:absolute;
-     bottom: 5px;
-     left: 10px;
-     transform: scale(0, 1);
-     transition: transform 0.3s ease;
- 
- } 
- .navbar a:hover::after {
-     width: 100%;
- 
-     transform: scale(1, 1);
- }
+   content: "";
+    width: 0;
+    height: 2px;
+    background:var(--main-color);
+    position:absolute;
+    bottom: 5px;
+    left: 10px;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
 
-.header .logoImg img{
-    height: 60px;
-    display: flex;
-    cursor: pointer;
-    width: auto;
-    transition: all 0.3s;
-    margin-right: auto;
-
-}
-:root{
-    --main-color:blueviolet;
-    --text-color:#020307;
-    --bg-color:#fff;
-}
-.logoImg img:hover{
-
-    transform: scale(1.05);
-
+} 
+.navbar a:hover::after {
+    width: 100%;
+    transform: scale(1, 1);
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10%;
-    height: 45px;
+a{
+    text-decoration: none;
 }
-
-.header .btn button{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color:blueviolet;
-    padding: 9px 25px;
-    background: #fff;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
+.header .overlay{
+    color: black;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color:rgba(11, 11, 11, 0.95) ;
+    overflow: hidden;
     transition: all 0.3s ease 0s;
 }
 
-.btn button:hover{
-    background-color:blueviolet;
-    color: white;
-    transform: scale(1.03);
-}
-
-#snackBar{
-    position: relative;
-    width: 100%;
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     align-items: center;
-
+    justify-content: center;
 }
 
-#snackBar img{
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color:blueviolet;
+}
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+.portrait-container .img{
+    display: flex;
+}
+
+.img-portrait{
     width: 100%;
-    height: 35rem;
-    position: relative;
-
+    height: 92vh;
 }
 
-.titulo{
-    margin-left: 2rem;
+.img-portrait2{
+    display: none;
+    width: 100%;
+    height: 92vh;
+}
+
+.info-container{
+    padding: 5px;
+    margin: 35px;
+    position: relative;
     bottom: 30rem;
-    position: relative;
-
-    
-
-}
-.titulo h1, h2{
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Roboto Slab', serif;
-    color: whitesmoke;
-    font-size: 5rem;
-    text-shadow: 2px 2px 20px #1A0B07;
-    
+    color: white;
 }
 
-.titulo button{
-    width: 13rem;
-    height: 3rem;
-    margin-top: 2rem;
-    background-color: rgb(203, 53, 158);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
+.title{
+    font-size: 3.5vmax;
+    text-shadow: 2px 2px 5px #999999;
+}
+
+.order-btn{
+    min-width: 15%;
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 5px;
     border: none;
-    box-shadow: 2px 2px 20px #03174d;
-
-}
-
-.titulo button:hover{
-    background-color: rgb(129, 25, 97);
-}
-
-.menu-snacks{
-    width: 28rem;
-    margin-left: 35rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 15rem;
-}
-
-.menu-snacks ul{
-    list-style: none;
-    display: flex;
-}
-   
-.menu-snacks li{
     color: white;
-    font-size: 15px;
-    padding-right: 3rem;
-    font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
+    background-color: rgb(113, 32, 189);
+    box-shadow: 2px 2px 20px #03174d;
 }
 
-.menu-snacks li:hover{
-    text-decoration: underline rgb(220, 20, 160);
-    text-decoration-thickness: 5px;
-}
-
-.menu-snacks li a{
+.order-btn a{
     text-decoration: none;
     color: white;
 }
 
-#img-container-palomitas{
+.order-btn:hover{
+    background-color: rgb(129, 25, 97);
+}
+
+.food-menu-title{
+    color: white;
+    text-shadow: 2px 5px 8px rgb(129, 25, 97);
+}
+
+#food-menu{
     position: relative;
+    bottom: 8rem;
     display: flex;
-    bottom: 9rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-#img-container-palomitas img{
-    margin: auto;
+.food-menu-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.popCorn1{
-    width: 13rem;
-    height: 10rem;
+.food-menu-title{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Belanosima', sans-serif;
 }
 
-.popCorn2{
-    width: 13rem;
-    height: 10rem;
+.food-menu-frase{
+    color: rgb(106, 209, 104);
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.popCorn3{
-    width: 13rem;
-    height: 10rem;
+.food-menu-img{
+    width: 15%;
 }
 
-.popCorn1-title{
-    margin-bottom: 8rem;
-    margin-right: 3rem;
-}
-
-.popCorn1-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-}
-
-.popCorn2-title{
-    margin-bottom: 8rem;
-    margin-right: 3rem;
-}
-
-.popCorn2-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.popCorn3-title{
-    margin-bottom: 8rem;
-    margin-right: 5rem;
-}
-
-.popCorn3-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.popCorn1-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(20, 127, 220);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.popCorn2-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(20, 127, 220);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.popCorn3-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(20, 127, 220);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-}
-
-#img-container-palomitas button:hover{
-    background-color: rgba(199, 32, 85, 0.874);
-    color: white;
-}
-
-#img-container-bebidas{
+#menu-container {
+    height: 100%;
+    justify-content: center;
+    margin: 35px;
     position: relative;
+    bottom: 5rem;
     display: flex;
-    bottom: 2rem;
-    
+    flex-wrap: wrap;
 }
-
-#img-container-bebidas img{
-    margin: auto;
-    
-}
-
-.drink1 {
-    width: 12rem;
-    height: 12rem;
-}
-
-
-.drink2 {
-    width: 11rem;
-    height: 12rem;
-}
-
-.drink3{
-    width: 11rem;
-    height: 12rem;
-}
-
-.drink1-title{
-    margin-bottom: 8rem;
-    margin-right: 8rem;
-}
-
-.drink1-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-}
-
-.drink2-title{
-    margin-bottom: 8rem;
-    margin-right: 3rem;
-}
-
-.drink2-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.drink3-title{
-    margin-bottom: 8rem;
-    margin-right: 5rem;
-}
-
-.drink3-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.drink1-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(97, 20, 220);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.drink2-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(97, 20, 220);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.drink3-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(97, 20, 220);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-}
-
-#img-container-bebidas button:hover{
-    background-color: rgba(199, 32, 85, 0.874);
-    color: white;
-}
-
-#img-container-hotdogs{
-    position: relative;
-    display: flex;
-    top: 4rem;
-    
-}
-
-#img-container-hotdogs img{
-    margin: auto;
-    
-}
-
-.hotdog1 {
-    width: 12rem;
-    height: 12rem;
-}
-
-
-.hotdog2 {
-    width: 11rem;
-    height: 12rem;
-}
-
-.hotdog3{
-    width: 10rem;
-    height: 10rem;
-}
-
-.hotdog1-title{
-    margin-bottom: 8rem;
-    margin-right: 8rem;
-}
-
-.hotdog1-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-}
-
-.hotdog2-title{
-    margin-bottom: 8rem;
-    margin-right: 3rem;
-}
-
-.hotdog2-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.hotdog3-title{
-    margin-bottom: 8rem;
-    margin-right: 5rem;
-}
-
-.hotdog3-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.hotdog1-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(137, 12, 129);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.hotdog2-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(137, 12, 129);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.hotdog3-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(137, 12, 129);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-}
-
-#img-container-hotdogs button:hover{
-    background-color: rgba(199, 32, 85, 0.874);
-    color: white;
-}
-
-
-/*hey*/
-#img-container-nachos{
-    position: relative;
-    display: flex;
-    top: 10rem;
-    
-}
-
-#img-container-nachos img{
-    margin: auto;
-    padding-bottom: 2rem;
-    
-}
-
-.nachos1 {
-    width: 11rem;
-    height: 12rem;
-}
-
-
-.nachos2 {
-    width: 11rem;
-    height: 12rem;
-}
-
-.nachos3{
-    width: 10rem;
-    height: 10rem;
-}
-
-.nachos1-title{
-    margin-bottom: 8rem;
-    margin-right: 10rem;
-}
-
-.nachos1-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-}
-
-.nachos2-title{
-    margin-bottom: 8rem;
-    margin-right: 3rem;
-}
-
-.nachos2-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.nachos3-title{
-    margin-bottom: 8rem;
-    margin-right: 5rem;
-}
-
-.nachos3-title h3{
-    color: white;
-    font-size: 15px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    text-shadow: 0 0 5px #FFF, 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 75px #ff1818, 6px 5px 20px rgba(206,0,0,0);
-
-}
-
-.nachos1-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(19, 173, 99);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.nachos2-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(19, 173, 99);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-    
-}
-
-.nachos3-title button{
-    margin-top: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border: none;
-    background-color: rgb(19, 173, 99);
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-
-}
-
-#img-container-nachos button:hover{
-    background-color: rgba(199, 32, 85, 0.874);
-    color: white;
-}
-
-/*Responsive*/
-
-@media only screen and (max-width: 800px) {
-    /* Estilos para pantallas menores o iguales a 800px */
-    body {
-        background-image: url("https://media.tenor.com/ll3rQ9a_zqYAAAAC/galaxy.gif");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
   
-    .titulo {
-      bottom: 30rem;
-    }
-  
-    .menu-snacks {
-        width: 28rem;
-        margin-left: 20rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        bottom: 15rem;
-    }
-
-    #snackBar img{
-        width: 61rem;
-        height: 35rem;
-        position: relative;
-    }
-
-    #img-container-palomitas img{
-        margin: auto;
-        display: flex;
-    }
-
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    max-width: 300px;
+    margin: 10px; 
+    box-shadow: 0px 2px 2px rgb(203, 47, 255);
   }
+  
+.card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
 
+.food-title{
+    padding: 5px;
+}
 
-@media only screen and (max-width: 1000px) {
-    /* Estilos para pantallas menores o iguales a 900px */
-    body {
-        background-image: url("https://media.tenor.com/ll3rQ9a_zqYAAAAC/galaxy.gif");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+.food-info{
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-info button{
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: chartreuse;
+    color: rgb(17, 11, 11);
+}
+
+.food-info a{
+    text-decoration: none;
+    color: black;
+}
+
+.food-info button:hover{
+    background-color: #7fe26f;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    background-image: url("../imagenes/cinema-food-wallpaper.webp");
+    height: 100vh
+}
+
+#form h4{
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#form p{
+    color: rgb(156, 192, 88);
+    text-align: center;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    background-color: white;
+    padding: 55px;
+    min-width: 35%;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px rgb(99, 184, 80);
+    min-height: 65%;
+    margin-bottom: 15px;
+}
+
+form 
+input, 
+label, 
+select{
+    margin-bottom: 8px;
+}
+
+form
+input,
+select{
+    padding: 4px;
+    border: none;
+    border-bottom: 2px solid rgb(106, 209, 104);
+}
+
+form input:focus{
+    outline: none
+}
+
+.orderFood-btn{
+    margin-top: 5%;
+    text-align: right;
+
+}
+
+.orderFood-btn .order-submit-btn{
+    border: none;
+    border-radius: 10px;
+    background-color: #7fe26f;
+    padding: 15px;
+}
+
+.orderFood-btn .order-submit-btn:hover{
+    background-color: #5ddd49;
+}
+
+@media screen and (max-height:450px){
+    
+    .header .overlay a{
+        font-size: 20px;
     }
 
-    #snackBar img{
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    /*form{
         width: 100%;
-        height: 35rem;
-        position: relative;
-    
-    }
-  
-    .titulo {
-      bottom: 30rem;
-    }
-  
-    .menu-snacks {
-        width: 28rem;
-        margin-left: 20rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        bottom: 15rem;
-    }
+        height: 75%;
+    }*/
+}
 
-    #snackBar img{
-        width: 61rem;
-        height: 35rem;
-        position: relative;
-    }
-
-    #img-container-palomitas img{
-        margin: auto;
-        display: flex;
-    }
-
-  }
-  
-@media only screen and (max-width: 500px) {
-    /* Estilos para pantallas menores o iguales a 500px */
-    body {
-        background-image: url("https://media.tenor.com/ll3rQ9a_zqYAAAAC/galaxy.gif");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    .titulo {
-      bottom: 30rem;
-    }
-
-    .titulo h1, h2{
-        font-size: 70px;
-    }
-  
-    .menu-snacks {
+@media screen and (max-width: 890px) {
+    .menu, .btn{
         display: none;
     }
 
-    #snackBar img{
-        width: 61rem;
-        height: 35rem;
-        position: relative;
+    .Menu{
+        display: inherit ;
     }
-
-    #img-container-palomitas{
-        position: relative;
-        display: flex;
-        bottom: 9rem;
-    }
-
-    .popCorn1,
-    .popCorn2,
-    .popCorn3{
-        width: 13rem;
-        height: 10rem;
-    
-    }
-
-    #img-container-palomitas img{
-        margin: auto;
-    }
-    
-    
-  }
-
-@media only screen and (max-width: 390px) {
-    /* Estilos para pantallas menores o iguales a 390px */
-    body {
-        background-image: url("https://media.tenor.com/ll3rQ9a_zqYAAAAC/galaxy.gif");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    .titulo {
-      bottom: 30rem;
-    }
-
-    .titulo h1, h2{
-        font-size: 65px;
-    }
+}
 
 
-    .menu-snacks {
+@media screen and (max-width: 370px){
+    .portrait-container .img-portrait {
         display: none;
     }
-
-    #snackBar img{
-        width: 61rem;
-        height: 35rem;
-        position: relative;
-    }
-
-    #img-container-palomitas{
-        position: relative;
+    
+    .portrait-container .img-portrait2 {
         display: flex;
-        bottom: 15rem;
     }
 
-    #img-container-bebidas{
-        bottom: 9rem;
+    .orderFood-btn .order-submit-btn{
+        border: none;
+        border-radius: 10px;
+        background-color: #7fe26f;
+        padding: 5px;
+        font-size: 0.75rem;
     }
+}
 
-    #img-container-hotdogs{
-        top: 2rem;
-    }
-
-    .popCorn1,
-    .popCorn2,
-    .popCorn3{
-        width: 13rem;
-        height: 10rem;
-    
-    }
-
-    #img-container-palomitas img{
-        margin: auto;
+@media screen and (max-width: 450px){
+    .portrait-container .img-portrait {
+        display: none;
     }
     
-    
-  }
+    .portrait-container .img-portrait2 {
+        display: flex;
+    }
+}
