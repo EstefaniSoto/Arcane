@@ -113,6 +113,26 @@ header {
     transform: scale(1, 1);
 }
 
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    height: 45px;
+
+  }
+
+.header .btn button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color:blueviolet;
+    padding: 9px 25px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
 a{
     text-decoration: none;
 }

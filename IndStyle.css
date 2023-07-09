@@ -10,8 +10,8 @@ body{
     height: 100vh;
     width: 100%;
     background-size: cover;
-    background-image: url(imagenes.img/banner3.webp) ;
     background-position: center;
+    background-image: url(imagenes.img/banner10.jpg);
     background-repeat: no-repeat;
     transition: 5s;
     
@@ -23,28 +23,185 @@ body{
     animation-fill-mode: forwards ;
     animation-iteration-count: infinite ;
     }
+    body::before{
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        min-height: 100%;  
+        width: 100%;
+        z-index: -1;
+        
+    }
     
     @keyframes animate{
     
         0%{
-            background-image: url(imagenes.img/banner13.jpg) ;
+            background-image: url(imagenes.img/cropped-1920-1080-1003220.png) ;
         }
         20%{
             background-image: url(imagenes.img/pe.jpg) ;
         }
         40%{
-            background-image: url(imagenes.img/po.jpg) ;
+            background-image: url(imagenes.img/banner10.jpg) ;
         }
         60%{
             background-image: url(imagenes.img/banner11.jpg) ;
         }
         80%{
-            background-image: url(imagenes.img/banner10.jpg) ;
+            background-image: url(imagenes.img/banner14.jpg) ;
         }
         100%{
-            background-image: url(imagenes.img/cropped-1920-1080-1003220.png) ;
+            background-image: url(imagenes.img/banner13.jpg) ;
         }
     
+    
+}
+header section{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    bottom: 20px;
+    color: #fff;
+}
+header section .cards{
+    position: relative;
+    width: 100%;
+    height: 260px;
+    margin-top: 10px ;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior:smooth;
+}
+header section .cards::-webkit-scrollbar{
+    display: none;
+}
+header section .cards .card{
+   position: relative;
+   min-width: 175px;
+   height: 245px;
+   border-radius: 8px;
+   margin-right: 5px;
+   background: #000;
+   transition: .3s linear;
+}
+header section .cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+ }
+
+ header section .cards .card:hover {
+    min-width: 390px;
+    overflow: hidden;
+ }
+ header section .cards .card .rest_card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+
+ }
+ header section .cards .card .rest_card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+    
+ }
+
+header section .cards .card .rest_card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index:-1;
+}
+
+header section .cards .card .rest_card .cont{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+    
+}
+header section .cards .card .rest_card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    width: 90%;
+}
+header section .cards .card .rest_card .cont .sub p{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, .7)
+}
+
+header section .cards .card .rest_card .cont .sub h3{
+    color:#fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+}
+
+header section .cards .card .rest_card .cont .sub span{
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px ;
+    
+}
+header section .cards .card .rest_card .cont .sub h3 i{
+    margin-right: 3px ;
+}
+header section .cards .card:hover .rest_card {
+    opacity: 1 ;
+}
+
+header section .bi-chevron-left,
+.bi-chevron-right{
+
+    position: absolute;
+    top: 50%;
+    left: -1.5%;
+    width: 50px;
+    height: 50px;
+    background:rgb(255, 255, 255, .3);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear ;
+    z-index: 999999999;
+    
+
+}
+header section .bi-chevron-right{
+
+    left: unset;
+    right: -1.5%;
 }
 
 
@@ -52,9 +209,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 10%;
+    padding: 5px 5%;
     height: 45px;
-   
 
   }
   .Menu{
