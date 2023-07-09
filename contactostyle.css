@@ -52,9 +52,6 @@ header {
     }
 }
 
-
-
-
 .header .logoImg img{
     height: 60px;
     display: flex;
@@ -76,7 +73,6 @@ transform: scale(1.05);
 
 
 }
-
 
 .menu ul{
     list-style: none;
@@ -263,6 +259,7 @@ p:before{
     border-radius: 6px;
     font-size: 13px;
     box-shadow: 10px 10px 40px -14px #000;
+    text-align: center;
 }
 span{
     /*margin: 0 5px 0 15px;*/
