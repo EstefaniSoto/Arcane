@@ -44,6 +44,7 @@ body::before{
 }
 
 .titulo{
+    
     color: white;
     text-align: center;
     border-bottom: 3px solid rgba(136, 26, 146);
@@ -60,7 +61,7 @@ body::before{
 /* Reservar tickets */
 .Rtickets{
     width: 500px;
-    height: 600px;
+    height: 450px;
     display: grid;
     place-items: center;
     position: relative;
@@ -68,7 +69,7 @@ body::before{
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px black;
-    background: rgba(136, 26, 146);
+    background: rgb(108, 26, 146);
     margin-bottom: 50px;
 
 }
@@ -79,15 +80,25 @@ body::before{
     align-items: center;
     font-size: 30px;
     text-shadow: 3px 3px black;
+    margin-top: 0;
+}
+
+.select-container{
+   display: flex; 
+}
+
+.select-container select{
+    margin: 30px;
 }
 
 /* labels y inputs */
 
-label{
+.label{
     padding-top: 10px;
+    font-size: 18px;
 }
 
-input{
+.input{
     padding-top: 10px;
     border: none;
     text-decoration: none;
@@ -96,10 +107,12 @@ input{
     outline: none;
     width: 100%;
     color: white;
+    font-size: 14px;
 }
 
 ::placeholder{
-    color: black;
+    color:#ffffffc9;
+    font-size: 15px;
 }
 
 .Rtickets form{
@@ -115,13 +128,12 @@ input{
     height: 55px;
     background: none;
     border-radius: 11px;
-    
+    cursor: pointer;
     outline: none;
     color: #ffffff;
     font-size: 20px;
     font-weight: 700;
     border-width: 3px;
-
     transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
       
@@ -130,50 +142,45 @@ input{
     color: rgba(136, 26, 146);
 }
 
+select{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    width: 250px;
+}
+
 /* navbar */
-header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 10%;
     height: 45px;
-   
+}
 
-  }
-  .Menu{
+.Menu{
     display: none ;
-  }
+}
 
-    .header .btn button,
-    .header .Menu button{
-   
+.header .btn button,
+.header .Menu button
+{
     font-weight: 700;
-     color:blueviolet;
-     padding: 9px 25px;
-     background: #fff;
-     border: none;
-     border-radius: 50px;
-     cursor: pointer;
-     transition: all 0.3s ease 0s;
-  }
+    color:blueviolet;
+    padding: 9px 25px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
 
-  .btn button:hover,
-  .header .Menu button:hover{
+.btn button:hover,
+.header .Menu button:hover{
     background-color:blueviolet;
     color: white;
     transform: scale(1.03);
-  }
-
-@media screen and (max-width: 800px) {
-    .menu, .btn{
-        display: none;
-    }
-
-    .Menu{
-        display: inherit ;
-    }
 }
-
 
 
 
@@ -185,8 +192,6 @@ header {
     transition: all 0.3s;
     margin-right: auto;
     
-
-
 }
 :root{
     --main-color:blueviolet;
@@ -195,11 +200,9 @@ header {
 }
 .logoImg img:hover{
 
-transform: scale(1.05);
-
+    transform: scale(1.05);
 
 }
-
 
 .menu ul{
     list-style: none;
@@ -242,9 +245,7 @@ transform: scale(1.05);
 
 } 
 .navbar a:hover::after {
-
     width: 100%;
-
     transform: scale(1, 1);
 }
 
@@ -292,9 +293,10 @@ a{
     font-size: 65px;
 }
 
+
 /* media query y responsive */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .div-encabezado {
         width: 100%;
         margin: 20px 0;
@@ -308,4 +310,28 @@ a{
     }
 
     
+}
+
+@media screen and (max-height:450px){
+    
+    .header .overlay a{
+        font-size: 20px;
+    }
+
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .menu, .btn{
+        display: none;
+    }
+
+    .Menu{
+        display: inherit ;
+    }
 }
