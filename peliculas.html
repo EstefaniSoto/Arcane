@@ -20,16 +20,30 @@
         </div>
         
         <!--Menú-->
-        <nav class="menu">
+    <nav class="menu">
+       
         <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Home</a></li>
             <li><a href="peliculas.html">Cartelera</a></li>
             <li><a href="snacks/index.html">Snacks</a></li>
             <li><a href="tickets/index_tickets.html">Tickets</a></li>
+    
         </ul>
         
         </nav>
         <a href="contacto.html" class="btn"><button>Contacto</button></a>
+        <a onclick="openNav()" class="Menu"  href="#"><button>Menu</button></a>
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="peliculas.html">Cartelera</a>
+            <a href="snacks/index.html">Snacks</a>
+            <a href="tickets/index_tickets.html">Tickets</a>
+            <a href="contacto.html">Contacto</a>
+            </div>
+    
+        </div>
         </header>
 
 <!--Cartelera de peliculas inicio-->

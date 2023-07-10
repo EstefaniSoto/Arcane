@@ -238,23 +238,18 @@ a{
     font-size: 65px;
 }
 
-@media (max-width: 940px){
-    header{
-        background-color: black;
-        
-        
+@media screen and (max-height:450px){
+    
+    .header .overlay a{
+        font-size: 20px;
     }
-    .menu ul{
-        position: fixed;
-        top: 80px;
-        left: 0;
-        background:blueviolet;
-        height: 100vh;
-        width: 100%;
-        display: block;
-        text-align: center;
-    } 
-    .menu ul li{
-        margin: 40px 0;
+
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
+
 }
+
+
