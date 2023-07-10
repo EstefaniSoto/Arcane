@@ -150,7 +150,8 @@ header section .cards .card .rest_card .cont .sub{
 header section .cards .card .rest_card .cont .sub p{
     font-size: 12px;
     font-weight: 400;
-    color: rgb(255, 255, 255, .7)
+    color: rgb(255, 255, 255, .7);
+    text-decoration: none;
 }
 
 header section .cards .card .rest_card .cont .sub h3{
@@ -158,6 +159,7 @@ header section .cards .card .rest_card .cont .sub h3{
     font-size: 12px;
     display: flex;
     align-items: center;
+    text-decoration: none;
 
 }
 
@@ -168,6 +170,7 @@ header section .cards .card .rest_card .cont .sub span{
     margin: 0px 5px 0px 10px;
     font-weight: 500;
     border-radius: 2px ;
+    text-decoration: none;
     
 }
 header section .cards .card .rest_card .cont .sub h3 i{
