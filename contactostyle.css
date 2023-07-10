@@ -218,6 +218,23 @@ p:before{
     color:gray;
 }
 
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline-style: hidden;
+    resize: none;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid grey;
+}
+
+textarea:focus {
+    border-bottom: 2px solid lightblue;
+}
+
 .btn-send{
     float: right;
     border-radius: 20px;

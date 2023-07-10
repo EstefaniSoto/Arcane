@@ -33,16 +33,20 @@
     </header>
     
     <!--Breve descripción-->
-    <form class="form" id="contactForm">
+    <form action="https://formsubmit.co/yzam0203@email.com" method="POST" class="form">
+        
         <h2>Contactenos</h2>
-        <p><input placeholder="Nombre completo" id="nombre"></p>
-        <p><input placeholder="Email" id="email"></p>
-        <p><input placeholder="Haga su sugerencia" id="sugerencia"></p>
-        <button type="submit" class="btn-send">Enviar mensaje</button>
+
+        <p><input type="text" name="name" placeholder="Nombre completo" id="nombre" required></p>
+        <p><input type="email" name="email" placeholder="Email" id="email" required></p>
+        <p><textarea name="suggestion" placeholder="Haga su sugerencia" id="sugerencia"></textarea></p> 
+        <button type="submit" class="btn-send" type="submit">Enviar mensaje</button>
+
         <div class="formu">
             <span class="fa fa-phone"></span> 809-235-9324 ext.214
             <span class="fa fa-envelope-o"></span> ArCinema@arcane.com
         </div>
+
     </form>
 
     <script src="contact.js"></script>
