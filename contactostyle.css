@@ -282,3 +282,17 @@ span{
     /*margin: 0 5px 0 15px;*/
     margin:auto;
 }
+
+@media screen and (max-height:450px){
+    
+    .header .overlay a{
+        font-size: 20px;
+    }
+
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+}
