@@ -44,10 +44,9 @@ body::before{
 }
 
 .titulo{
-    
     color: white;
     text-align: center;
-    border-bottom: 3px solid rgba(136, 26, 146);
+    border-bottom: 3px solid rgba(108, 26, 146);
 }
 
 .subtitulo{
@@ -55,16 +54,17 @@ body::before{
     text-align: center;
     margin-top: 35px;
     font-style: italic;
-
 }
 
 /* Reservar tickets */
+.reservar_tickets{
+    display: flex;
+    align-items: center;
+}
+
 .Rtickets{
     width: 500px;
-    height: 450px;
-    display: grid;
-    place-items: center;
-    position: relative;
+    height: auto;
     margin: auto;
     padding: 30px;
     border-radius: 15px;
@@ -119,6 +119,11 @@ body::before{
     display: grid;
     place-items: center;
     color: white;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
 }
 
 .button {

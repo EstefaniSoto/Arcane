@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.text{
+    width: 300px;
+    font-size: 20px;
+}
+.text .categoria{
+    font-size: 22px;
+}
+
+.imagen{
+    width: 250px;
+    border-radius: 5px;             
+}
+
+#imagen{
+    width: 250px;
+    border-radius: 5px;
+    box-shadow:  20px 20px 60px #c4c3c8,
+}
